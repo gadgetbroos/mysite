@@ -4,14 +4,17 @@ body {
   padding: 0;
   background-color: #fef8f8; /* Warna latar belakang yang lebih lembut */
   color: #555; /* Warna teks yang lebih lembut */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Memastikan body setidaknya tinggi viewport */
 }
 
 header {
-  background-color: #ff6f61; /* Warna latar belakang header yang lebih feminin */
+  background-color: #ff6f61; /* Warna latar belakang header */
   color: white;
-  padding: 20px;
+  padding: 10px 20px; /* Mengurangi padding header */
   text-align: center;
-  border-bottom: 4px solid #ff3f2b; /* Garis bawah header */
+  border-bottom: 3px solid #ff3f2b; /* Garis bawah header */
   animation: headerBounce 1.5s infinite; /* Animasi header */
 }
 
@@ -20,21 +23,22 @@ header {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
   60% {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
   }
 }
 
 main {
+  flex: 1; /* Membuat area main mengisi ruang yang tersisa */
   padding: 20px;
   text-align: center;
 }
 
 h1 {
   margin: 0;
-  font-size: 2.5em; /* Ukuran font yang lebih besar untuk judul utama */
+  font-size: 2em; /* Ukuran font yang lebih kecil untuk judul utama */
   animation: fadeIn 2s ease-in-out; /* Animasi fade-in untuk judul */
 }
 
@@ -49,7 +53,7 @@ h1 {
 
 h2 {
   color: #ff6f61; /* Warna heading yang sesuai dengan header */
-  font-size: 1.8em; /* Ukuran font yang lebih besar untuk heading */
+  font-size: 1.5em; /* Ukuran font yang lebih kecil untuk heading */
   margin-top: 0;
   animation: fadeIn 2s ease-in-out 1s; /* Animasi fade-in dengan delay */
 }
@@ -57,11 +61,11 @@ h2 {
 .greeting {
   margin: 20px auto;
   max-width: 600px;
-  padding: 20px;
+  padding: 15px; /* Mengurangi padding untuk area ucapan */
   background-color: #fff; /* Warna latar belakang putih untuk area ucapan */
-  border-radius: 12px; /* Sudut border yang lebih bulat */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid #ff6f61; /* Border tipis dengan warna tema */
+  border-radius: 8px; /* Sudut border yang lebih bulat */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ff6f61; /* Border tipis dengan warna tema */
   animation: slideIn 1s ease-out; /* Animasi slide-in */
 }
 
@@ -77,10 +81,10 @@ h2 {
 }
 
 .greeting i {
-  font-size: 50px;
+  font-size: 40px; /* Ukuran ikon yang lebih kecil */
   color: #ff6f61; /* Warna ikon sesuai tema */
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Mengurangi jarak bawah ikon */
   animation: bounce 1s infinite; /* Animasi bounce pada ikon */
 }
 
@@ -89,10 +93,10 @@ h2 {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
   60% {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
   }
 }
 
@@ -106,9 +110,7 @@ footer {
   background-color: #ff6f61; /* Warna latar belakang footer sesuai tema */
   color: white;
   text-align: center;
-  padding: 15px;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  border-top: 4px solid #ff3f2b; /* Garis atas footer */
+  padding: 10px 20px; /* Mengurangi padding footer */
+  border-top: 3px solid #ff3f2b; /* Garis atas footer */
+  position: relative; /* Mengubah posisi agar footer tetap di bawah halaman */
 }
